@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+		<title>otto says</title>
+		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="github.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body class="simon-says"><div class="content-wrapper">
+		<h1 class="main-title">Об этом месте</h1>
+		
+		<p>В небольшой команде web-разработчиков всем приходится заниматься всем.
+		js-разработчику может понадобиться исправить css, верстальщику js, а backend-программисту
+		сегодня нужно исправить и то и другое.</p>
+
+		<p>У разных людей разный персональный взгляд на то как оформлять свой код. Очень трудно
+		поддерживать приложение, код в котором оформлен совершенно по-разному. Нужны правила
+		которые установят определенное форматирование. Не хорошее и не плохое, а общее для всех.</p>
+
+		<p>Правила оформления касаются кода и всего что с ним непосредственно связано, например порядка
+		работы с репозиторем.</p>
+		
+		<div class="index">
+			<a href="#common">Общее</a><br>
+			<a href="#html">HTML</a><br>
+			<a href="#python">Python</a><br>
+			<a href="#git">Git</a><br>
+			<a href="js.html">Javascript</a>
+		</div>
+		
+		<div class="section">
+			<h2 id="common" class="common-section-title section-title">Общее</h2>
+
+			<ul class="rules-list">
+				<li class="rules-list-item"><span class="list-marker">—</span>Выравнивание кода табами, <strong>не пробелами</strong></li class="rules-list-item">
+				<li class="rules-list-item"><span class="list-marker">—</span>Все комментарии/коммиты на английском языке</li class="rules-list-item">
+				<li class="rules-list-item"><span class="list-marker">—</span>Кодировка всех исходников <strong>utf8</strong></li class="rules-list-item">
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Составные имена файлов разделяются "-"
+					<div class="list-note _muted">За исключением случаев когда это невозможно как
+					например в случае с модулями python. Название python-модуля
+					как правило должно соответствовать формату переменной python.</div>
+				</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span> Список элементов выравнивается
+					по вертикали если в нем больше 3-х элементов
+
+					<div class="list-note _muted">Например js-объект:
+
+<pre><code class="javascript">var obj = {
+	keyOne   : 1,
+	theSecond: 2
+	third    : 3,
+	theLast  : 4
+}</code></pre>
+
+					</div>
+				</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span> Любые списки сортируются по алфавиту
+					<div class="list-note _muted">
+						<p>Например ключи в js-объекте или функции в исходнике.</p>
+						
+						<p>Производные этого правила надо применять везде. То есть если список
+						однородный — он весь сортируется по алфавиту. Если нет, то сортируются
+						только элементы в группах внутри списка.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="section">
+			<h2 id="html" class="html-section-title section-title">HTML</h2>
+			
+			<ul class="rules-list">
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Атрибут #id, если он есть, стоит
+					указывать в самом начале описания узла
+				</li>
+
+				<li class="rules-list-item"><span class="list-marker">—</span>Двойные кавычки. В описании узлов и в шаблонах.</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Тип содержимого &lt;script&gt; указывать не нужно
+				</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Узел, который не умещается на одной строке
+					отделяется от остальных новой строкой
+
+					<div class="list-note _muted">
+
+<pre><code class="html">&lt;li&gt;List item&lt;/li&gt;
+
+&lt;li&gt;
+	Very ver long title
+	with many many rows
+&lt;/li&gt;
+				
+&lt;li&gt;List item&lt;/li&gt;
+</code></pre>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="section">
+			<h2 id="python" class="python-section-title section-title">Python</h2>
+
+			<ul class="rules-list">
+				<li class="rules-list-item"><span class="list-marker">—</span>PEP8</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Выравнивание табами
+					<div class="list-note _muted">PEP8 не запрещает выравнивание табами, но только одновременное выравнивание табами и пробелами</div>
+				</li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Односложные параметры лямбда-функций
+					<div class="list-note _muted">Как правило это заглавная одна или две буквы<pre><code class="python">lambda P: P.upper()</code></pre></div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="section">
+			<h2 id="git" class="git-section-title section-title">Git</h2>
+			
+			<ul class="rules-list">
+				<li class="rules-list-item"><span class="list-marker">—</span>В ветке <strong>master</strong> только завершенный рабочий код, релиз</li>
+				<li class="rules-list-item"><span class="list-marker">—</span>Промежуточные версии собираются в <strong>dev</strong></li>
+				<li class="rules-list-item"><span class="list-marker">—</span>Каждый таск выполняется в отдельной ветке, потом мерджится в <strong>dev</strong></li>
+
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Атомарные коммиты
+
+					<div class="list-note _muted">
+						<p>Изменения в коммите должны затрагивать только один таск или одну часть
+						сложного таска. Чтобы при откате коммита от одного таска не откатились
+						изменения из другой области.</p>
+
+						<p>Если в ходе работы встретилось что-то что нужно
+						исправить, но что не относится к текущим правкам нужно использовать
+						<strong>git stash</strong> для того чтобы исправить
+						обнаруженное, коммитнуть и вернуться к текущим правкам.</p>
+					</div>
+				</li>
+				
+				<li class="rules-list-item">
+					<span class="list-marker">—</span>Репозиторий не бэкап
+
+					<div class="list-note _muted">Не стоит коммитить незавершенные изменения только для того чтобы сохранить их в репо.</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+		<script type="text/javascript" src="highlight.pack.js"></script>
+
+		<script type="text/javascript">
+			var code = document.getElementsByTagName('code');
+
+			hljs.configure({tabReplace: '  '});
+
+			for(var i=0; i < code.length; i++)
+				hljs.highlightBlock(code[i]);
+		</script>
+
+	</body>
+</html>

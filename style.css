@@ -1,0 +1,73 @@
+/*Global fonts and colors*/
+@font-face {
+	font-family: SegoeUILight;
+	src: local("SegoeUILight"), url(segoeuil.ttf);
+}
+
+a{
+	padding: .122em .274em;
+	color: #C95176;
+	text-decoration: none;
+	box-shadow: 0 .174em 0 -.081em #C95176;
+	transition: box-shadow .3s;
+}
+
+a:hover{
+	box-shadow: 0 .274em 0 -.081em #C95176;
+}
+
+a.back-to-index{
+	font-size: .8em;
+}
+
+.simon-says {
+	color: #4F4F4F;
+	line-height: 2.081em;
+	font-size: 18px; font-family: 'PT Serif Caption', serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.main-title { font-family: SegoeUILight; font-size: 2.25em; }
+
+/*Main content*/
+.content-wrapper { max-width: 38.4em; margin: auto; }
+
+/*Content section*/
+.section { margin: 2.25em 0; }
+
+.section-title {
+	display: inline-block;
+	width: auto;
+	padding-bottom: .296em;
+	border-bottom: .198em solid #C56EFF;
+	font-family: SegoeUILight; font-size: 1.5em;
+}
+
+.common-section-title { border-color: #FF6EA8; }
+.css-section-title { border-color: #C56EFF; }
+.html-section-title { border-color: #866EFF; }
+.python-section-title { border-color: #6EE7FF; }
+.git-section-title { border-color: #6EFF6E; }
+.js-section-title { border-color: #FFC06E; }
+
+/*Lists*/
+.rules-list { list-style: none; }
+.rules-list-item { margin: 1.387em 0; }
+.list-marker { display: inline-block; width: 1.5em; margin-left: -1.5em; }
+.rules-list-item .list-note { margin-top: .617em; }
+
+/*Inline code/important technical parts*/
+span.code{
+	padding: .2em .5em;
+	background-color: #F5F5F5;
+}
+
+/*Page index*/
+.index > a{
+	display: inline-block;
+	margin-bottom: 1em;
+	font-size: 1.1em;
+}
+
+/*Misc*/
+._muted { color: #999; }
