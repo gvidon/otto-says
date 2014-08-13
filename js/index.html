@@ -86,8 +86,10 @@
 
 			<div class="section">
 				<h2 id="expressions" class="js-section-title section-title">Блоки кода (выражения)</h2>
-				
-				<p>Блок в одну строку не должен выделяться фигурными скобками.</p>
+				<p>Блок в одну строку не должен выделяться фигурными скобками. Например:</p>
+				<pre><code class="javascript">if(missile.isReady()) launch();</code></pre>
+				<p>Подобное выражение можно и часто стоит упростить до:</p>
+				<pre><code class="javascript">missile.isReady() && launch();</code></pre>
 				
 				<p>Если выражение блока и оператор <span class="code">if/else/for/while</span>
 				умещается в 132 символа, то весь блок стоит оформить на одной строке.</p>
