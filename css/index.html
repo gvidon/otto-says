@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Otto says!</title>
+		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption' rel='stylesheet' type='text/css'>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="../github.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body class="simon-says">
+		<div class="content-wrapper">
+			<a class="back-to-index" href="../index.html">К остальным style guide</a>
+			<h1 class="main-title">CSS style guide</h1>
+			
+			<div class="index">
+				<a href="#spacing">Интервалы</a><br>
+				<a href="#formatting">Форматирование</a><br>
+				<a href="#misc">Разное</a><br>
+				<a href="#custom-elements">Пользовательские элементы</a>
+			</div>
+			
+			<div class="section">
+				<h2 id="spacing" class="js-section-title section-title">Строки</h2>
+				<p>Используйте символы табуляции размером в 4 пробела для отступов.</p>
+				<p>Расставляйте пробелы после <span class="code">:</span> при объявлении свойства.</p>
+				<p>Расставляйте пробелы перед <span class="code">{</span> при объявлени правила.</p>
+				<p>При группировке селекторов каждой группе селекторов отводите по одной строке.</p>
+				<p><span class="code">}</span> окончания объявления правила переностие на новую строку.</p>
+				<p>Отделяйте двухместные операторы пробелами.</p>
+				<p>Каждое объявление начинайте с новой строки.</p>
+				<p>Отступы всех объявлений должны иметь на один отступ больше отнисотильно описания их селектора.</p>
+				<p>При каждом дополнительном уровне вложености увеличивайте все отступы на 1.</p>
+				<p>Начинайте описание стилей с непосредственного дочернего элемента <span class="code">body</span> (за исключением описания самого <span class="code">body</span> и общих стилей).</p>
+				<p>Разделяйте пробелами различные типы денных при описании свойства.</p>
+				<p>При описании свойства с множеством значений каждый набор значений записывайте на новой строке и отбивайте на 1 отступ больше относительно положения самого свойства.</p>
+				<p>Объявления свойств с префиксами записывайте в самом конце правила, отделив 1 пустой строкой от общего списка объявлений. Пустая строка должна содержать отступы.</p>
+			</div>
+			
+			<div class="section">
+				<h2 id="formatting" class="js-section-title section-title">Форматирование</h2>
+				<p>Используйте нотацию <span class="code">hsl()</span> / <span class="code">hsla()</span> для описания цвета.</p>
+				<p>Не задавайте единиц измерения при нулевых значениях (если это возможно).</p>
+				<p>Не указывайте ведущие нули.</p>
+				<p>Комментарии записывайте на отдельной строке. Текст комментария должен размещаться в одной строке, начинаться с заглавной буквы и заканчиваться знаком препинания (по возможности).</p>
+				<p>Для обозначения строк используйте двойные кавыки.</p>
+				<p>Строки записывайте в 1 строку.</p>
+			</div>
+			
+			<div class="section">
+				<h2 id="misc" class="js-section-title section-title">Разное</h2>
+				<p>Старайтесь избегать переопределения значений свойств.</p>
+				<p>Старайтесь использовать псевдо-классы <span class="code">:nth-*</span> из семейства <span class="code">type</span> вместо <span class="code">child</span>.</p>
+				<p>Не используйте псевдоклассы <span class="code">:first-*</span> и <span class="code">:last-*</span>, вместо них используйте <span class="code">:nth-*</span>.</p>
+				<p>Для описания изменяемого состояния уникального элемента из списка используйте селектор класса с префиксом <span class="code">_</span>.</p>
+				<p>Для описания неизменяемого состояния уникального элемента используйте селектор класса.</p>
+				<p>Для описания уникального элемента в группе используйте аттрибутивный селектор (по возможности, <span class="code">[data-type]</span>).</p>
+				<p>Для описания ощих стилей группы элементов используйте аттрибутивный селектор <span class="code">[data-u]</span>.</p>
+				<p>По возможности старайтесь избегать использования функции <span class="code">calc()</span>.</p>
+				<p>@-правила располагайте в начале файла.</p>
+				<p>Псевдо-элементы предваряйте двойным двоеточием.</p>
+			</div>
+			
+			<div class="section">
+				<h2 id="custom-elements" class="js-section-title section-title">Пользовательские элементы</h2>
+				<p>Именование непосредственныx дочерниx элементов <span class="code">body</span> предваряйте префиксом <span class="code">u-</span>, всех остальных <span class="code">x-</span>.</p>
+				<p>Старайтесь избегать использование стандартных элементов (X)HTML.</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../highlight.pack.js"></script>
+		
+		<script type="text/javascript">
+			var code = document.getElementsByTagName('code');
+			
+			hljs.configure({tabReplace: '  '});
+			
+			for(var i=0; i < code.length; i++)
+				hljs.highlightBlock(code[i]);
+		</script>
+	</body>
+</html>
