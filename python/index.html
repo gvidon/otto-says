@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Otto says!</title>
+		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption' rel='stylesheet' type='text/css'>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="screen"/>
+		<link href="../github.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body class="simon-says">
+		<div class="content-wrapper">
+			<a class="back-to-index" href="../">К остальным style guide</a>
+			<h1 class="main-title">Python style guide</h1>
+
+			<p><a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>, со своими почти
+			не противоречащим дополнениям.</p>
+			
+			<div class="index">
+				<a href="#strings">Строки</a><br>
+				<a href="#stringlength">Длина строк</a><br>
+				<a href="#comments">Комментарии</a><br>
+				<a href="#lambda">Параметры лямбда-функций</a><br>
+				<a href="#verticalalignment">Вертикальное выравнивание</a><br>
+				<a href="#lists">Списки параметров и значений</a><br>
+				<a href="#lastcomma">Последняя запятая</a>
+			</div>
+			
+			<div class="section">
+				<h2 id="strings" class="python-section-title section-title">Строки</h2>
+
+				<p>Везде для строк используются одинарные кавычки.</p>
+
+				<p>Для конкатенации строк когда это возможно следует использовать шаблоны:</p>
+<pre><code class="python">'http://mywebsite.com/%u/%d' % (username, id)</code></pre>
+			</div>
+			
+			<div class="section">
+				<h2 id="stringlength" class="python-section-title section-title">Длина строки кода</h2>
+
+				<p>До 132-х символов.</p>
+			</div>
+
+			<div class="section">
+				<h2 id="comments" class="python-section-title section-title">Комментарии</h2>
+
+				<p>Все комментарии пишутся с большой буквы, с одним пробелом после <span class="code">#</span>.
+				Блок/строка с комментарием отделяется от следующего блока/строки,
+				к которому не относится комментарий пустой строкой.
+
+				<p>Строка кода с комментарием на той же строке не отделяется от остального
+				кода пустой строкой</p>
+
+				<p>Комментарий более чем на две строки заключается в <span class="code">'''</span></p>
+			</div>
+
+			<div class="section">
+				<h2 id="lambda" class="python-section-title section-title">Параметры лямбда-функций</h2>
+
+				<p>Параметры лямбда-функций должны называться заглавными литерами или парой литер. Чтобы сохранить
+				их компактность и предотвратить избыточность действий в инлайн функциях.</p>
+
+<pre><code class="python">lambda P: P.upper()</code></pre>
+			</div>
+
+			<div class="section">
+				<h2 id="verticalalignment" class="python-section-title section-title">Вертикальное выравнивание</h2>
+				
+				<p>К содержимому списка/дикта и списку импорта применяется вертикальное
+				выравнивание значений, если в списке больше 3-х элементов. Например:</p>
+				
+<pre><code class="python">import os
+import sys
+
+from django        import settings
+from django.models import Model
+from django.forms  import Form
+from selenium      import WebDriver
+
+from myapp.app import views
+from myapp.util import randomizer
+from myapp import models
+</code></pre>
+
+			<p>Выравнивание применяется к последовательности строк, не содержащей пустую строку.</p>
+			</div>
+
+			<div class="section">
+				<h2 id="lists" class="python-section-title section-title">Списки параметров и значений</h2>
+
+				<p>Если параметры функции/метода или значения списка/дикта не удается разместить на одной строке
+				следует перечислить каждый на отдельной, разместив закрывающую скобку на следующей после
+				последнего элемента строке:</p>
+
+<pre><code class="python">user = User.objects.filter(
+	is_confirmed=True,
+	gender='male',
+	age__gt=25,
+).exclude(is_online=False)</code></pre>
+			</div>
+
+			<div class="section">
+				<h2 id="lastcomma" class="python-section-title section-title">Последняя запятая</h2>
+
+				<p>В списках параметров функиций/методов и значений списков/диктов где каждое значение
+				размещено на новой строке последний элемент на последней строке должен завершаться запятой.</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../highlight.pack.js"></script>
+
+		<script type="text/javascript">
+			var code = document.getElementsByTagName('code');
+
+			hljs.configure({tabReplace: '  '});
+
+			for(var i=0; i < code.length; i++)
+				hljs.highlightBlock(code[i]);
+		</script>
+	</body>
+</html>
