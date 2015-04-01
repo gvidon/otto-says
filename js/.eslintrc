@@ -24,8 +24,8 @@
 		"key-spacing"             : 0,
 		"no-mixed-spaces-and-tabs": [1],
 		
-		// Allow for spaced alignemnt of "="
-		"no-multi-spaces": 0,
+		// Allow for spaced alignemnt of "=" and ":"
+		"no-multi-spaces": [2, {exceptions: {"Property": true, "AssignmentExpression": true}}],
 		
 		"no-spaced-func": [1],
 		
