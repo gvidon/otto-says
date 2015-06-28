@@ -12,7 +12,14 @@
 		<div class="content-wrapper">
 			<a class="back-to-index" href="../">К остальным style guide</a>
 			<h1 class="main-title">Javascript style guide</h1>
-			<h2 class="js-section-title section-title">Перенос строк</h2>
+
+		
+		<div class="index">
+			<a href="#newline">Перенос строк</a><br>
+			<a href="#linter">Linter</a>
+		</div>
+
+			<h2 id="newline" class="js-section-title section-title">Перенос строк</h2>
 			<p>Не стоит применять никакие правила логической/стилистической группировки при добавлении новой строки в js. Перенос строки нужно использовать <strong>только</strong> перед/после многострочными блоками и перед/после участка комментированного кода.</p>
 <pre><code class="javascript">someCall(param);
 object.method(objectParam);
@@ -49,7 +56,7 @@ dictionary = {
 callMe.callMe();
 anotherCall();
 </code></pre>
-			<h2 class="js-section-title section-title">Linter</h2>
+			<h2 id="linter" class="js-section-title section-title">Linter</h2>
 			<p>Применяемые правила описаны в конфиге для <a href="http://eslint.org/docs/rules/">eslint</a>:</p>
 
 <pre><code class="json"><!--# include file=".eslintrc" -->
