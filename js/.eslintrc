@@ -23,7 +23,11 @@
 		"indent"                  : [2, "tab"],
 		"key-spacing"             : 0,
 		"no-mixed-spaces-and-tabs": [1],
-		"no-spaced-func"          : [1],
+		
+		// Allow for spaced alignemnt of "=" and ":"
+		"no-multi-spaces": [2, {exceptions: {"Property": true, "AssignmentExpression": true}}],
+		
+		"no-spaced-func": [1],
 		
 		// We often change the lambda-function context with .bind()
 		"no-wrap-func": false,
