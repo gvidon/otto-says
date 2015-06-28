@@ -12,7 +12,43 @@
 		<div class="content-wrapper">
 			<a class="back-to-index" href="../">К остальным style guide</a>
 			<h1 class="main-title">Javascript style guide</h1>
-			<p>Применяемые правила описаны в конфиге для <a href="http://eslint.org/docs/rules/">eslint</a>:</p>
+			<h2 class="js-section-title section-title">Перенос строк</h2>
+			<p>Не стоит применять никакие правила логической/стилистической группировки при добавлении новой строки в js. Перенос строки нужно использовать <strong>только</strong> перед/после многострочными блоками и перед/после участка комментированного кода.</p>
+<pre><code class="javascript">someCall(param)
+object.method(objectParam)
+anotherObject(anotherParam)
+ 
+# This is comment
+commented.call()
+thisCall.relatesToCommentAbove()
+ 
+object.method(objectParam)
+anotherObject(anotherParam)
+ 
+if(1 > 0)
+  call()
+  
+callAfter.ifCondition()
+ 
+dictionary = {
+  'another_key': V,
+  'bb': value,
+  
+  'largeValue': [
+    11231231238712312763871263,
+    11231231238712312763871263,
+    11231231238712312763871263,
+    11231231238712312763871263,
+  ],
+  
+  'zz': 'short value',
+}
+ 
+callMe.callMe()
+anotherCall()
+</code></pre>
+			<h2 class="js-section-title section-title">Linter</h2>
+			<p>Другие применяемые правила описаны в конфиге для <a href="http://eslint.org/docs/rules/">eslint</a>:</p>
 
 <pre><code class="json">
 <!--# include file=".eslintrc" -->
