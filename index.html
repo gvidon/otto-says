@@ -9,56 +9,61 @@
 	</head>
 
 	<body class="simon-says"><div class="content-wrapper">
-		<h1 class="main-title">Об этом месте</h1>
-		
-		<p>В небольшой команде web-разработчиков всем приходится заниматься всем.
-		js-разработчику может понадобиться исправить css, верстальщику js, а backend-программисту
-		сегодня нужно исправить и то и другое.</p>
-
-		<p>У разных людей разный персональный взгляд на то как оформлять свой код. Очень трудно
-		поддерживать приложение, код в котором оформлен совершенно по-разному. Нужны правила
-		которые установят определенное форматирование. Не хорошее и не плохое, а общее для всех.</p>
-
-		<p>Правила оформления касаются кода и всего что с ним непосредственно связано, например порядка
-		работы с репозиторем.</p>
+		<h1 class="main-title">Otto says Welcome!</h1>
+		<p>В OttoFeller.com мы следуем некоторым соглашениям при работе в команде и при оформлении кода.</p>
 		
 		<div class="index">
-			<a href="#common">Общее</a><br>
-			<a href="#html">HTML</a><br>
-			<a href="python/">Python</a><br>
+			<a href="#tools">Инструменты командной работы</a><br>
+			<a href="#code">Оформление кода</a><br>
 			<a href="#git">Git</a><br>
-			<a href="js/">Javascript</a><br>
-			<a href="css/">CSS</a>
+			<a href="#pr">Code review</a>
 		</div>
 		
 		<div class="section">
-			<h2 id="common" class="common-section-title section-title">Общее</h2>
+			<h2 id="tools" class="tools-section-title section-title">Инструменты командной работы</h2><br>
+			<p>Если у вас до сих пор по каким-то причинам нет доступа к любому из перечисленных инструментов отправьте <strong>@nide</strong> свой email с просьбой добавить вас.</p>
+			<h3 class="subsection-title">GitHub Issues</h3>
+			<p>Используется для планирования и контроля выполнения конкретных технических задач для всех разработчиков — js/css/python.</p>
+			<p><a href="https://github.com/chunkytae/realtlr/issues">https://github.com/chunkytae/realtlr/issues</a></p>
+			<h3 class="subsection-title">Trello</h3>
+			<p>Планирование более высокого уровня чем в Issues. Например задачи (карты) в Trello могут включать несколько задач в github для разных команд разарботчиков — как UI так и REST API.</p>
+			<p><a href="https://trello.com/b/P0t9Itxk/office">https://trello.com/b/P0t9Itxk/office</a></p>
+			<h3 class="subsection-title">Dropbox</h3>
+			<p>Все файлы, такие как документация, иконки, шрифты, изображения, новые макеты выкладываются в общую директорию в Dropbox.</p>
+			<p><a href="https://www.dropbox.com/sh/z4094il6gbdiwfr/AACbCFG6Em7gtlScc4_Uzoywa">https://www.dropbox.com/sh/z4094il6gbdiwfr/AACbCFG6Em7gtlScc4_Uzoywa</a></p>
+			<h3 class="subsection-title">Dropbox Paper</h3>
+			<p>Работа над и обсуждение новой документация происходит в Dropbox Paper. Он заметно минималистичней конкурентов, но имеет все необходимые функции.</p>
+			<p><a href="https://paper.dropbox.com/folder/show/BluAvenu-e.4ABicIua2YZr0ye0eP3Z1LqKUGOgTjPEW9NJ1Jgbk6cGu47xd">https://paper.dropbox.com/folder/show/BluAvenu-e.4ABicIua2YZr0ye0eP3Z1LqKUGOgTjPEW9NJ1Jgbk6cGu47xd</a></p>
+			<h3 class="subsection-title">Slack</h3>
+			<p>Мы используем slack для командного и гораздо реже персонального чата.</p>
+			<p><strong>Принципиально важно</strong>, чтобы все технические вопорсы обсуждались в общих чатах. Избегайте как можно чаще персонального общения. Техничсекие подробности вашего задании позднее могут понадобиться кому-то другому при работе над той же частью приложения. Кроме того, очень важно хотя бы бегло читать общие чаты, чтобы быть в курсе всего происходящего в работе над приложением.</p>
+			<p><a href="https://ottofeller.slack.com/">https://ottofeller.slack.com/</a></p>
+		</div>
+	
+		<div class="section">
+			<h2 id="code" class="code-section-title section-title">Оформление кода</h2><br>
 
 			<ul class="rules-list">
-				<li class="rules-list-item"><span class="list-marker">—</span>Выравнивание кода табами, <strong>не пробелами</strong></li class="rules-list-item">
+				<li class="rules-list-item"><span class="list-marker">—</span>Любые <strong>неочевидные</strong> вещи должны быть прокомментированы</li class="rules-list-item">
 				<li class="rules-list-item"><span class="list-marker">—</span>Все комментарии/коммиты на английском языке</li class="rules-list-item">
 				<li class="rules-list-item"><span class="list-marker">—</span>Кодировка всех исходников <strong>utf8</strong></li class="rules-list-item">
 
 				<li class="rules-list-item">
-					<span class="list-marker">—</span>Составные имена файлов разделяются "-"
-					<div class="list-note _muted">За исключением случаев когда это невозможно как
-					например в случае с модулями python. Название python-модуля
-					как правило должно соответствовать формату переменной python.</div>
+					<span class="list-marker">—</span>Составные имена файлов по умолчанию разделяются "-"
+					<div class="list-note _muted">За исключением случаев когда это невозможно как например в случае с модулями python. Название python-модуля как правило должно соответствовать формату переменной python.</div>
 				</li>
 
 				<li class="rules-list-item">
 					<span class="list-marker">—</span> Список элементов выравнивается
-					по вертикали если в нем больше 3-х элементов
+					по вертикали если в нем два и более элементов
 
 					<div class="list-note _muted">Например js-объект:
-
-<pre><code class="javascript">var obj = {
-	keyOne   : 1,
-	theSecond: 2,
-	third    : 3,
-	theLast  : 4
-}</code></pre>
-
+<pre><code class="javascript">const
+	obj = {
+		keyOne   : 1,
+		theSecond: 2,
+		third    : 3
+	};</code></pre>
 					</div>
 				</li>
 
@@ -66,80 +71,28 @@
 					<span class="list-marker">—</span> Любые списки сортируются по алфавиту
 					<div class="list-note _muted">
 						<p>Например ключи в js-объекте или функции в исходнике.</p>
-						
-						<p>Производные этого правила надо применять везде. То есть если список
-						однородный — он весь сортируется по алфавиту. Если нет, то сортируются
-						только элементы в группах внутри списка.</p>
+						<p>Производные этого правила должны применяться везде. То есть если список однородный — он весь сортируется по алфавиту. Если нет, то сортируются только элементы в группах внутри списка.</p>
 					</div>
 				</li>
 			</ul>
 		</div>
-	
+
 		<div class="section">
-			<h2 id="html" class="html-section-title section-title">HTML</h2>
-			
-			<ul class="rules-list">
-				<li class="rules-list-item">
-					<span class="list-marker">—</span>Атрибут #id, если он есть, стоит
-					указывать в самом начале описания узла
-				</li>
-
-				<li class="rules-list-item"><span class="list-marker">—</span>Двойные кавычки. В описании узлов и в шаблонах.</li>
-
-				<li class="rules-list-item">
-					<span class="list-marker">—</span>Тип содержимого &lt;script&gt; указывать не нужно
-				</li>
-
-				<li class="rules-list-item">
-					<span class="list-marker">—</span>Узел, который не умещается на одной строке
-					отделяется от остальных новой строкой
-
-					<div class="list-note _muted">
-
-<pre><code class="html">&lt;li&gt;List item&lt;/li&gt;
-
-&lt;li&gt;
-	Very ver long title
-	with many many rows
-&lt;/li&gt;
-				
-&lt;li&gt;List item&lt;/li&gt;
-</code></pre>
-
-					</div>
-				</li>
-			</ul>
-		</div>
-		
-		<div class="section">
-			<h2 id="git" class="git-section-title section-title">Git</h2>
+			<h2 id="pr" class="pr-section-title section-title">Git</h2>
 			
 			<ul class="rules-list">
 				<li class="rules-list-item"><span class="list-marker">—</span>В ветке <strong>master</strong> только завершенный рабочий код, релиз</li>
-				<li class="rules-list-item"><span class="list-marker">—</span>Промежуточные версии собираются в <strong>dev</strong></li>
-				<li class="rules-list-item"><span class="list-marker">—</span>Каждый таск выполняется в отдельной ветке, потом мерджится в <strong>dev</strong></li>
-
-				<li class="rules-list-item">
-					<span class="list-marker">—</span>Атомарные коммиты
-
-					<div class="list-note _muted">
-						<p>Изменения в коммите должны затрагивать только один таск или одну часть
-						сложного таска. Чтобы при откате коммита от одного таска не откатились
-						изменения из другой области.</p>
-
-						<p>Если в ходе работы встретилось что-то что нужно
-						исправить, но что не относится к текущим правкам нужно использовать
-						<strong>git stash</strong> для того чтобы исправить
-						обнаруженное, коммитнуть и вернуться к текущим правкам.</p>
-					</div>
-				</li>
-				
-				<li class="rules-list-item">
-					<span class="list-marker">—</span>Репозиторий не бэкап
-
-					<div class="list-note _muted">Не стоит коммитить незавершенные изменения только для того чтобы сохранить их в репо.</div>
-				</li>
+				<li class="rules-list-item"><span class="list-marker">—</span>Промежуточные версии собираются в <strong>dev</strong> и сразу после прохождения тестов в ci код автоматически билдится и отправляется на сервер.</li>
+				<li class="rules-list-item"><span class="list-marker">—</span>Каждый таск выполняется в отдельной ветке и после review мерджится в <strong>dev</strong></li>
 			</ul>
+		</div>
+
+
+		<div class="section">
+			<h2 id="git" class="git-section-title section-title">Code Review</h2>
+			<p>Описание Pull Request-а должно содержать всю необходимую для review информацию, как минимум ссылку на оригинальную задачу.</p>
+			<p>Review может проводить человек, который не знает ни о задаче ни о том какие трудности/нессоответсвия описанию случились при ее выполнении. Поэтому описание во многих случаях может ускорить review.</p>
+			<p>Например. При исправлении бага в PR-е стоит написать в чем заключался баг и как он исправлен.</p>
 		</div>
 	</div>
 

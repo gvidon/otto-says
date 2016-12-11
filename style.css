@@ -40,15 +40,21 @@ a.back-to-index{
 	width: auto;
 	padding-bottom: .296em;
 	border-bottom: .198em solid #C56EFF;
-	font-family: SegoeUILight; font-size: 1.5em;
+	font-family: SegoeUILight;
+	font-size: 1.5em;
 }
 
-.common-section-title { border-color: #FF6EA8; }
-.css-section-title { border-color: #C56EFF; }
-.html-section-title { border-color: #866EFF; }
-.python-section-title { border-color: #6EE7FF; }
+.subsection-title {
+	font-family: SegoeUILight;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin: 1.6em 0 0 0;
+}
+
+.tools-section-title { border-color: #FF6EA8; }
+.code-section-title { border-color: #C56EFF; }
 .git-section-title { border-color: #6EFF6E; }
-.js-section-title { border-color: #FFC06E; }
+.pr-section-title { border-color: #FFC06E; }
 
 /*Lists*/
 .rules-list { list-style: none; }
